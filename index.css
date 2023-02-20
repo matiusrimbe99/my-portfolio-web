@@ -40,11 +40,11 @@ body {
 }
 
 .navbar-logo {
-  flex: 60%;
+  flex: 20%;
 }
 
 .navbar-navigation {
-  flex: 40%;
+  flex: 80%;
 }
 
 .img-logo {
@@ -53,14 +53,15 @@ body {
 
 .navlink-items {
   display: flex;
+  justify-content: flex-end;
 }
 
 .navbar-link {
-  flex: 3;
+  margin-right: 10px;
   text-align: center;
   font-weight: 500;
   text-decoration: none;
-  padding: 12px;
+  padding: 12px 25px;
   color: white;
   border-radius: 50px;
   background-color: #03567c;
@@ -134,7 +135,6 @@ section {
 
 .headquarter {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin-top: 50px;
 }
@@ -148,6 +148,7 @@ section {
   border: 2px solid red;
   border-radius: 50%;
 }
+
 .headquarter-content p {
   text-align: center;
 }
@@ -161,7 +162,7 @@ section {
 
 .message-content {
   flex: 50%;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .message-form {
@@ -215,8 +216,108 @@ button:hover {
   background-color: #e0cb09;
 }
 
-/* @media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
+@media (max-width: 1200px) {
+  .headquarter {
+    flex-direction: column;
+    align-items: center;
   }
-} */
+  .headquarter-content img {
+    width: 250px;
+  }
+  .headquarter-content {
+    padding: 20px 0;
+  }
+  .message-form {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .message {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 85%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 702px) {
+  .container {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-logo {
+    display: none;
+  }
+
+  .navbar-link {
+    margin: 20px 0;
+    margin-right: 10px;
+  }
+
+  .article {
+    flex-direction: column;
+  }
+
+  .article.visi {
+    flex-direction: column;
+  }
+
+  .about-img,
+  .misi-img,
+  .visi-img {
+    text-align: center;
+  }
+
+  .article img {
+    margin-top: 20px;
+  }
+
+  .message {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 280px) {
+  .fluid-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .navlink-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar-link {
+    margin: 0;
+    padding: 12px 0;
+    border-radius: 0;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  .message-content {
+    padding: 0;
+  }
+
+  .result-message {
+    padding: 0;
+  }
+}
