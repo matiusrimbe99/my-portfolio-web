@@ -85,3 +85,25 @@ function btn_submit() {
     e_error_message.innerText = errors.pesan;
   }
 }
+
+let currentIndex = 1;
+sliderItem(currentIndex);
+
+function setSlider(num) {
+  sliderItem((currentIndex += num));
+}
+
+function sliderItem(num) {
+  let x;
+  let slides = document.getElementsByClassName("slider-item");
+  if (num > slides.length) {
+    currentIndex = 1;
+  }
+  if (num < 1) {
+    currentIndex = slides.length;
+  }
+  for (x = 0; x < slides.length; x++) {
+    slides[x].style.display = "none";
+  }
+  slides[currentIndex - 1].style.display = "block";
+}

@@ -101,6 +101,53 @@ section {
   text-align: center;
 }
 
+.slider-item {
+  display: none;
+}
+
+.slider-item img {
+  margin: 50px auto;
+  display: block;
+  width: 100%;
+}
+
+.images-slider {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+.slider-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 8px 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.prev {
+  left: 2%;
+}
+
+.next {
+  right: 2%;
+}
+
+.prev:hover,
+.next:hover {
+  color: rgb(255, 253, 253);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .headquarter {
   display: flex;
   justify-content: center;
@@ -137,6 +184,7 @@ section {
 .message-form {
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
   margin: 20px;
   color: white;
   background-color: #1b7996;
@@ -147,7 +195,6 @@ section {
   display: flex;
   flex-direction: column;
   padding: 0 25px;
-  margin-top: 20px;
 }
 
 .result-message {
@@ -177,7 +224,8 @@ button {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  margin: 30px 0;
+  margin-bottom: 30px;
+  margin-top: 20px;
   color: #ffffff;
 }
 
@@ -197,7 +245,8 @@ button:hover {
     align-items: center;
   }
   .headquarter-content img {
-    width: 250px;
+    width: 300px;
+    height: 300px;
   }
   .headquarter-content {
     padding: 20px 0;
