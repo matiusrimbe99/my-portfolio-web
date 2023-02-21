@@ -124,9 +124,9 @@ main {
 }
 
 .article img {
-  width: 50%;
+  max-width: 80%;
   border: 2px solid red;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .article-title {
