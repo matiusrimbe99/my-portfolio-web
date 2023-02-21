@@ -35,7 +35,7 @@
     <!-- Section Our Company -->
     <section class="container">
       <div class="header-section">
-        <h1 class="header-title">Hi, Matius Rimbe Welcome to Website</h1>
+        <h1 class="header-title">Hi, <span id="name"></span> Welcome to Website</h1>
         <p class="header-content">Ini adalah website Portfolio untuk latihan pertama saya.</p>
       </div>
     </section>
@@ -66,30 +66,38 @@
         <!-- Form Message -->
         <div class="message-content">
           <h3>Form Message</h3>
-          <form action="" class="message-form">
+          <form class="message-form" id="form">
             <div class="message-form-group">
-              <label for="">Nama</label>
-              <input type="text" name="" id="" class="message-form-input" placeholder="Masukkan nama">
+              <label for="full_name">Nama</label>
+              <input type="text" name="full_name" id="full_name" class="message-form-input" placeholder="Masukkan nama"
+                onchange="validate()">
+              <p class="invalid" id="error_name"></p>
             </div>
             <div class="message-form-group">
-              <label for="">Tanggal Lahir</label>
-              <input type="date" name="" class="message-form-input" id="">
+              <label for="tgl_lahir">Tanggal Lahir</label>
+              <input type="date" name="tgl_lahir" class="message-form-input" id="tgl_lahir" onchange="validate()">
+              <p class="invalid" id="error_birth"></p>
             </div>
             <div class="message-form-group">
-              <label for="">Jenis Kelamin</label>
+              <label for="jenis_kelamin">Jenis Kelamin</label>
               <div class="radio-btn">
-                <input type="radio" name="jenis_kelamin" class="message-form-input" id="">
-                <label for="">Laki-Laki</label>
-                <input type="radio" name="jenis_kelamin" class="message-form-input" id="">
-                <label for="">Perempuan</label>
+                <input type="radio" name="jenis_kelamin" class="message-form-input" id="man" value="Laki-Laki"
+                  onchange="validate()">
+                <label for="man">Laki-Laki</label>
+                <input type="radio" name="jenis_kelamin" class="message-form-input" id="woman" value="Perempuan"
+                  onchange="validate()">
+                <label for="woman">Perempuan</label>
               </div>
+              <p class="invalid" id="error_jk"></p>
             </div>
             <div class="message-form-group">
-              <label for="">Pesan</label>
-              <textarea name="" id="" rows="3" placeholder="Masukkan pesan" class="message-form-input"></textarea>
+              <label for="pesan">Pesan</label>
+              <textarea name="pesan" id="pesan" rows="3" placeholder="Masukkan pesan" class="message-form-input"
+                onchange="validate()"></textarea>
+              <p class="invalid" id="error_message"></p>
             </div>
             <div class="message-form-group">
-              <button type="button">Submit</button>
+              <button type="button" onclick="btn_submit()">Submit</button>
             </div>
           </form>
         </div>
@@ -99,30 +107,25 @@
           <h3>Result Message</h3>
           <div class="result-message">
             <div class="result-item">
-              <label for="">Current Time:</label>
-              <p>Fri Jun 17 2022 11:27:28 GMT+0100</p>
+              <label for="time_today">Current Time:</label>
+              <p id="time_today"></p>
             </div>
             <div class="result-item">
-              <label for="">Nama:</label>
-              <p>Matius Rimbe</p>
+              <label for="result_name">Nama:</label>
+              <p id="result_name"></p>
             </div>
             <div class="result-item">
-              <label for="">Tanggal Lahir</label>
-              <p>05/06/1999</p>
+              <label for="result_tgl_lahir">Tanggal Lahir</label>
+              <p id="result_tgl_lahir"></p>
             </div>
             <div class="result-item">
-              <label for="">Jenis Kelamin:</label>
-              <p>Laki-Laki</p>
+              <label for="result_jk">Jenis Kelamin:</label>
+              <p id="result_jk"></p>
             </div>
             <div class="result-item">
-              <label for="">Pesan:</label>
-              <p>Ini adalah pesan yang saya kirim.</p>
+              <label for="result_message">Pesan:</label>
+              <p id="result_message"></p>
             </div>
-            <!-- <p>Current Time:<span> Fri Jun 17 2022 11:27:28 GMT+0100</span></p>
-            <p>Nama:<span> Matius Rimbe</span></p>
-            <p>Tanggal Lahir:<span> 05 /06/1999</span></p>
-            <p>Jenis Kelamin:<span> Laki-Laki</span></p>
-            <p>Pesan:<span> Ini adalah pesan yang saya kirim.</span></p> -->
           </div>
         </div>
       </div>
@@ -138,5 +141,6 @@
   </footer>
   <!-- End of Footer -->
 </body>
+<script src="index.js"></script>
 
 </html>
