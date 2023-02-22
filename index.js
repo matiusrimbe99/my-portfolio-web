@@ -3,10 +3,10 @@ const element = document.getElementById("name");
 element.innerText = form;
 
 function validate() {
-  document.getElementById("error_name").style.display = "none";
-  document.getElementById("error_birth").style.display = "none";
-  document.getElementById("error_jk").style.display = "none";
-  document.getElementById("error_message").style.display = "none";
+  document.getElementById("error_name").style.visibility = "hidden";
+  document.getElementById("error_birth").style.visibility = "hidden";
+  document.getElementById("error_jk").style.visibility = "hidden";
+  document.getElementById("error_message").style.visibility = "hidden";
 }
 
 function btn_submit() {
@@ -28,28 +28,28 @@ function btn_submit() {
   let error_message;
 
   if (name == undefined || name.trim() == "") {
-    document.getElementById("error_name").style.display = "block";
+    document.getElementById("error_name").style.visibility = "visible";
 
     error_name = "Nama lengkap harus diisi.";
   } else {
     error_name = "";
   }
   if (tgl_lahir == undefined || tgl_lahir.trim() == "") {
-    document.getElementById("error_birth").style.display = "block";
+    document.getElementById("error_birth").style.visibility = "visible";
 
     error_birth = "Tanggal lahir harus diisi.";
   } else {
     error_birth = "";
   }
   if (jenis_kelamin == undefined || jenis_kelamin.trim() == "") {
-    document.getElementById("error_jk").style.display = "block";
+    document.getElementById("error_jk").style.visibility = "visible";
 
     error_jk = "Jenis kelamin harus diisi.";
   } else {
     error_jk = "";
   }
   if (pesan == undefined || pesan.trim() == "") {
-    document.getElementById("error_message").style.display = "block";
+    document.getElementById("error_message").style.visibility = "visible";
     error_message = "Pesan harus diisi.";
   } else {
     error_message = "";

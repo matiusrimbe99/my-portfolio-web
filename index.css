@@ -235,7 +235,7 @@ button:hover {
 
 .invalid {
   color: #ff0000;
-  margin-top: 5px;
+  margin-top: 0px;
   outline-color: #ffffff;
 }
 
